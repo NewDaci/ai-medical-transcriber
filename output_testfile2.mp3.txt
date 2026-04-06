@@ -1,0 +1,9 @@
+
+Transcript:
+The patient reports pain at the base of the left thumb for the past two days, worsening since yesterday. The pain is described as a baseline ache that becomes sharp with movement, especially when writing, gripping, or rotating the thumb. The pain is localized to the fleshy part at the base of the thumb and rates a 6 out of 10. Movements such as touching the pinky with the thumb and rotating the thumb cause the most pain. The patient has not tried any treatments except limiting use. There is no history of trauma or injury to the hand. The patient performs repetitive activities involving the left hand, including typing and handwriting notes, and is left-handed. No past medical conditions, medications, allergies, surgeries, or hospitalizations were reported. Family history is negative for musculoskeletal or rheumatologic conditions but positive for cancers (colon, breast, ovarian) in aunts and uncles. The patient is currently working online and has reduced handwriting, which has slightly improved symptoms. No pain medications have been taken. The patient lives alone, quit smoking 3-4 years ago after 1-2 years of light use, drinks alcohol occasionally, and uses marijuana edibles about once a month. On examination, pain is reproduced with thumb movement and wrist ulnar deviation. The clinical impression is likely de Quervain's tenosynovitis, a repetitive strain injury affecting the tendons at the base of the thumb. Differential includes early osteoarthritis. An X-ray is recommended to rule out osteoarthritis. Initial management includes conservative treatment with a thumb splint to limit movement and reduce swelling. If symptoms worsen or do not improve, corticosteroid injection may be considered. The patient was advised to continue conservative management and follow up as needed.
+
+Conditions:
+de Quervain's tenosynovitis, repetitive strain injury, possible early osteoarthritis
+
+Confidence:
+high
