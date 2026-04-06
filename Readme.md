@@ -90,6 +90,47 @@ http://127.0.0.1:8000/docs
 
 ---
 
+## 🐛 Issue & Fix
+
+### ❌ Initial Problem
+
+The system was returning empty `conditions` array for medical transcripts with hand/thumb-related conditions:
+
+```json
+{
+  "transcript": "we'll bring you in here today. i'm here because my left hand kind of just at the base of my thb has been hurting...",
+  "conditions": [],
+  "confidence": "medium"
+}
+```
+
+**Root Cause:** The `medical.py` service only checked for generic terms (diabetes, hypertension, asthma, fever) and didn't recognize:
+- Domain-specific spelling errors ("thb" → "thumb", "thick wear of the ends" → "de quervain's tenosynovitis")
+- Musculoskeletal conditions (tenosynovitis, osteoarthritis)
+- Hand/wrist-related pain symptoms
+
+### ✅ Solution Applied
+
+Enhanced `medical.py` with:
+1. **Expanded MEDICAL_DICT** with common transcription errors and musculoskeletal terms
+2. **Applied dictionary corrections** to normalized text before condition matching
+3. **Extended MEDICAL_TERMS** list to include hand/wrist/thumb pain and conditions like "de quervain's tenosynovitis"
+4. **Improved negation detection** to handle phrases like "haven't"
+
+### ✨ Result After Fix
+
+```json
+{
+  "transcript": "we'll bring you in here today. i'm here because my left hand kind of just at the base of my thumb has been hurting...",
+  "conditions": ["de quervain's tenosynovitis", "osteoarthritis", "hand pain", "thumb pain"],
+  "confidence": "high"
+}
+```
+
+Now the API correctly identifies musculoskeletal conditions and provides accurate diagnostic insights from medical audio transcriptions.
+
+---
+
 ## ⚠️ Limitations
 
 * Basic keyword-based medical detection
