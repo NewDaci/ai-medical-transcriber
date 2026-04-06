@@ -40,19 +40,33 @@ app/
 
 ## ▶️ How to Run
 
-### 1. Install dependencies
+### 1. Create and activate virtual environment
 
-```
-pip install fastapi uvicorn faster-whisper python-multipart
+**Linux/macOS:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-### 2. Run server
-
+**Windows:**
+```bash
+python -m venv .venv
+.venv\Scripts\activate
 ```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run server
+
+```bash
 uvicorn app.main:app --reload
 ```
 
-### 3. Open API docs
+### 4. Open API docs
 
 ```
 http://127.0.0.1:8000/docs
