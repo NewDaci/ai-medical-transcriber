@@ -114,14 +114,17 @@ The API returns a JSON response containing:
 
 ## 🧠 Approach
 
+```
 FastAPI
-  ↓
+   ↓
 Whisper (Audio → Text)
-  ↓
+   ↓
 OpenAI (Text → Clean + Medical Intelligence)
-  ↓
+   ↓
 Structured JSON + File Storage
+```
 
+**Process Flow:**
 
 1. Convert audio → text using Whisper
 2. Save raw transcript to `raw_<uploaded_filename>.txt`
@@ -130,7 +133,7 @@ Structured JSON + File Storage
 5. Save final result to `output_<uploaded_filename>.txt`
 6. Return structured JSON response
 
-
+---
 ## 🐛 Issue & Fix
 
 ### ❌ Initial Problem
